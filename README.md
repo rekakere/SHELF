@@ -38,6 +38,8 @@ Unknown words, grammar patterns, pronouns, verb forms, and difficulty levels are
 
 <img width="1000" height="800" alt="Shelf dictionary view" src="https://github.com/user-attachments/assets/ffa548cc-daa7-42db-a192-2457171623c1" />
 
+<img width="1000" height="800" alt="image" src="https://github.com/user-attachments/assets/62c3f455-c4b6-428f-bd01-e33c68d8c30a" />
+
 ---
 
 ## Discover Instead of Memorize
