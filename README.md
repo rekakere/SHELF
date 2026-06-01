@@ -9,7 +9,6 @@ Instead of studying isolated vocabulary lists, learners discover words, grammar 
 - React + TypeScript
 - FastAPI + Python
 - spaCy NLP
-- OCR for import (pdf, png, jpg)
 - CEFR difficulty estimation
 - Adaptive review system
 
