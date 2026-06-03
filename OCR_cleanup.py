@@ -1,40 +1,74 @@
+from __future__ import annotations
+
 import re
 
 
-def remove_page_numbers(text):
-    lines = text.splitlines()
-    cleaned = []
+PAGE_NUMBER_PATTERN = re.compile(r"^\s*\d+\s*$")
+BROKEN_HYPHEN_PATTERN = re.compile(r"(\w)-\n(\w)")
+EXTRA_SPACES_PATTERN = re.compile(r"[ \t]+")
 
-    for line in lines:
-        stripped = line.strip()
 
-        if re.fullmatch(r"\d+", stripped):
+def remove_standalone_page_numbers(text: str) -> str:
+    lines = []
+
+    for line in text.splitlines():
+        if PAGE_NUMBER_PATTERN.fullmatch(line):
             continue
 
-        cleaned.append(line)
+        lines.append(line)
 
-    return "\n".join(cleaned)
+    return "\n".join(lines)
 
 
-def normalize_spacing(text):
-    text = re.sub(r"[ \t]+", " ", text)
+def repair_hyphenated_line_breaks(text: str) -> str:
+    return BROKEN_HYPHEN_PATTERN.sub(r"\1\2", text)
+
+
+def normalize_whitespace(text: str) -> str:
+    text = EXTRA_SPACES_PATTERN.sub(" ", text)
     text = re.sub(r"\n{3,}", "\n\n", text)
     return text.strip()
 
 
-def clean_ocr_text(text):
-    text = remove_page_numbers(text)
-    text = normalize_spacing(text)
+def join_soft_line_breaks(text: str) -> str:
+    lines = [line.strip() for line in text.splitlines()]
+    paragraphs: list[str] = []
+    current: list[str] = []
+
+    for line in lines:
+        if not line:
+            if current:
+                paragraphs.append(" ".join(current))
+                current = []
+            continue
+
+        current.append(line)
+
+    if current:
+        paragraphs.append(" ".join(current))
+
+    return "\n\n".join(paragraphs)
+
+
+def clean_ocr_text(text: str) -> str:
+    text = remove_standalone_page_numbers(text)
+    text = repair_hyphenated_line_breaks(text)
+    text = normalize_whitespace(text)
+    text = join_soft_line_breaks(text)
+
     return text
 
 
 if __name__ == "__main__":
-    sample = """1
+    sample = """
+    1
 
-    Este es un texto escaneado.
+    Este texto fue escanea-
+    do desde una página.
 
     2
-    Tiene espacios raros.
+
+    Tiene algunos saltos raros.
     """
 
     print(clean_ocr_text(sample))
