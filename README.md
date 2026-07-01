@@ -4,6 +4,7 @@ Shelf is a reading-centered language learning platform designed to help learners
 
 The project combines reading, dictionary lookup, grammar discovery, adaptive review, and language analysis into a single workflow.
 
+<img width="637" height="901" alt="4  dashboard" src="https://github.com/user-attachments/assets/fb05ef8d-026a-4f73-9259-4aa8a840d9dd" />
 
 ## Features
 
@@ -13,8 +14,7 @@ The project combines reading, dictionary lookup, grammar discovery, adaptive rev
 - Difficulty and knowledge overlays
 - Sentence collection
 
-<img width="900" height="800" alt="shelves_1" src="https://github.com/user-attachments/assets/428da2a1-555c-4db8-bb28-eedcb78e5ffd" />
-
+<img width="1158" height="765" alt="1  reader" src="https://github.com/user-attachments/assets/48fb6797-ffc9-44fd-8dfc-c0185181332d" />
 
 ### Dictionary
 - Word and phrase entries
@@ -22,7 +22,7 @@ The project combines reading, dictionary lookup, grammar discovery, adaptive rev
 - User-created definitions
 - Example sentences
 
-<img width="900" height="800" alt="shelf_dict" src="https://github.com/user-attachments/assets/a810c58d-5b83-4d7c-9650-c35727311ab8" />
+<img width="1114" height="878" alt="2  dictionary" src="https://github.com/user-attachments/assets/1bb5b3c1-0307-4262-9897-ff63baecd5be" />
 
 
 ### Grammar
@@ -32,13 +32,13 @@ The project combines reading, dictionary lookup, grammar discovery, adaptive rev
 - Conjugation tables
 - Related word forms
 
-<img width="900" height="800" alt="nouns" src="https://github.com/user-attachments/assets/01bbe3e5-b310-4beb-a4cd-bfa06ff6e8bb" />
-
 ### Review
 - Adaptive spaced repetition
 - Personal difficulty ratings
 - Vocabulary review
 - Phrase review
+
+<img width="583" height="490" alt="3  review" src="https://github.com/user-attachments/assets/2f7551e0-5e20-4fab-a24d-37b15cc1ac38" />
 
 ### Collectibles
 - Track discovered grammar forms
@@ -50,8 +50,6 @@ The project combines reading, dictionary lookup, grammar discovery, adaptive rev
 - Text analysis
 - Word frequency tracking
 - Language-specific processing
-
-<img width="900" height="800" alt="shelves" src="https://github.com/user-attachments/assets/25662164-8d37-4173-86b9-3d98a0e21cf9" />
 
 
 ## Built With
@@ -92,12 +90,12 @@ Current focus:
 - Grammar system expansion
 - Review system refinement
 - Multi-language support
+- Audio support
 
 ---
 
 ## Roadmap
 
-- Audio support
 - Pronunciation tools
 - Additional language models
 - Enhanced text analysis
